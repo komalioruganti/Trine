@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>My Evo Calendar</title>
+       <link rel="stylesheet" href="css/styles.css">
+       <link rel="stylesheet" href="css/evo-calendar.min.css">
+    </head>
+    <body>
+     
+    <div class ="hero">
+        <div id="calendar"></div>
+    </div>
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/evo-calendar.min.js"></script>
+    <script>
+     $(document).ready(function(){
+
+  
+      $("#calendar").evoCalendar({
+    calendarEvents: [
+      {
+        id: 'bHay68s', // Event's ID (required)
+        name: "Chemistry", // Event name (required)
+        date: "December/03/2020", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        name: "Mathematics",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["December/03/2022", "January/11/2023"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      },
+      {
+        name: "Programming",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["December/03/2022", "January/1/2023"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "red" // Event custom color (optional)
+      }
+    ]
+  });
+  
+    
+    $(".day").click(function(){
+    $(".event-list").html(`<form  method="post"> <input type = "checkbox" class="subs" name="sub1">subject1<br><input type = "checkbox" class="subs" name="sub2">Subject2 <br><input class="subs" type = "checkbox" name="sub3">Subject3 <br><input type = "checkbox" class="subs"   name="sub4">Subject4 <br><input type = "checkbox" class="subs" name="sub5">Subject5 <br><button type="submit"> Submit </buttton></form>`);
+  })
+})
+    </script>
+    </body>
+</html>
