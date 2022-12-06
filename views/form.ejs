@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form(Details)</title>
+    <link rel="stylesheet" href="C:\Users\nrmup\OneDrive\Desktop\web development\css\trine2-main\style2.css">
+</head>
+<body>
+    <form method="post">
+        <h1><strong>FORM</strong></h1>
+        <label><h2><strong>Attendance required</strong></h2></label>
+        <input type="text" name="req attendance">
+        <br>
+        <hr>
+        <div class="inputs">
+            
+        <table>
+            <tr>
+                <th>DAYS</th>
+                <th><input type="text" name="_sub1" placeholder="subject 1"></th>
+                <th><input type="text" name="_sub2" placeholder="subject 2"></th>
+                <th><input type="text" name="_sub3" placeholder="subject 3"></th>
+                <th><input type="text" name="_sub4" placeholder="subject 4"></th>
+                <th><input type="text" name="_sub5" placeholder="subject 5"></th>
+                <th><input type="text" name="_sub6" placeholder="subject 6"></th>
+            </tr>
+        <tr>
+            <td  class="day">Monday</td>
+            <td><input type="checkbox" name="_00" id="00"></td>
+            <td><input type="checkbox" name="_01" id="01"></td>
+            <td><input type="checkbox" name="_02"  id="02"></td>
+            <td><input type="checkbox" name="_03" id="03"></td>
+            <td><input type="checkbox" name="_04" id="04"></td>
+            <td><input type="checkbox" name="_05" id="05"></td>
+        </tr>
+        <tr>
+            <td class="day">Tuesday</td>
+            <td><input type="checkbox" name="_2s1" id="10"></td>
+            <td><input type="checkbox" name="_2s2" id="11"></td>
+            <td><input type="checkbox" name="_2s3" id="12"></td>
+            <td><input type="checkbox" name="_2s4" id="13"></td>
+            <td><input type="checkbox" name="_2s5" id="14"></td>
+            <td><input type="checkbox" name="_2s6" id="15"></td>
+        </tr>
+        <tr>
+            <td class="day">Wednesday</td>
+            <td><input type="checkbox" name="_3s1" id="20"></td>
+            <td><input type="checkbox" name="_3s2" id="21"></td>
+            <td><input type="checkbox" name="_3s3" id="22"></td>
+            <td><input type="checkbox" name="_3s4" id="23"></td>
+            <td><input type="checkbox" name="_3s5" id="24"></td>
+            <td><input type="checkbox" name="_3s6" id="25"></td>
+        </tr>
+        <tr>
+            <td class="day">thursday</td>
+            <td><input type="checkbox" name="_4s1" id="check30"></td>
+            <td><input type="checkbox" name="_4s2" id="check31"></td>
+            <td><input type="checkbox" name="_4s3" id="check32"></td>
+            <td><input type="checkbox" name="_4s4" id="check33"></td>
+            <td><input type="checkbox" name="_4s5" id="check34"></td>
+            <td><input type="checkbox" name="_4s6" id="check35"></td>
+        </tr>
+        <tr>
+            <td class="day"> Friday</td>
+            <td><input type="checkbox" name="_5s1" id="check40"></td>
+            <td><input type="checkbox" name="_5s2" id="check41"></td>
+            <td><input type="checkbox" name="_5s3" id="check42"></td>
+            <td><input type="checkbox" name="_5s4" id="check43"></td>
+            <td><input type="checkbox" name="_5s5" id="check44"></td>
+            <td><input type="checkbox" name="_5s6" id="check45"></td>
+        </tr>
+        <tr>
+            <td class="day">Saturday</td>
+            <td><input type="checkbox" name="_6s1" id="check50"></td>
+            <td><input type="checkbox" name="_6s2" id="check51"></td>
+            <td><input type="checkbox" name="_6s3" id="check52"></td>
+            <td><input type="checkbox" name="_6s4" id="check53"></td>
+            <td><input type="checkbox" name="_6s5" id="check54"></td>
+            <td><input type="checkbox" name="_6s6" id="check55"></td>
+        </tr>
+    <br>
+    </div>
+    </form></table>
+    <button type = "submit">Submit </button>
+<br>
+<script>
+    let myclassName = "check";
+    const rows = 6
+const cols = 6
+const data = new Array(rows).fill(
+    new Array(cols).fill(false)
+)
+    for(let i=0; i<6; i++)
+    {
+        for(let j=0; j<6; j++)
+        {
+            let newClassName = myclassName + i + j;
+            var status= document.getElementById(newClassName).checked;
+            console.log(status);
+            data[i][j] = status;
+            
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>

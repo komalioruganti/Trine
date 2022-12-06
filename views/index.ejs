@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="764311447732-kl99ecvoe9s4sp93dveb59892plg5j21.apps.googleusercontent.com">
+    <title>OAuth2 Flow</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <table  cellspacing="200">
+        <tr>
+<td>
+    <table cellspacing="80">
+        <tr>
+            <td class="ft"><h1><strong>WELCOME!</strong></h1>
+            <p><h2><em>First Things First...</em></h2></p>
+        <p><h2><em>Make Sure You Login</em></h2></p></h1></td>
+<tr>
+ <td> <img width="400"src="images/Problem.png" alt=" Attendance Maintanance And Management"></td></tr>
+    </table> 
+</td>
+<td>
+    <table cellspacing="100">
+        <div class="form">
+        <form action="/" method="post" enctype="text/plain">
+<label><h1>FIRST NAME </h1></label>
+    <input type="text" name="name" value="">
+    <br>
+    <br>
+    <label><h1>LAST NAME</h1> </label>
+    <input type="text" name="last name" value="">
+    <br>
+    <br>
+</form>
+
+<label><h1>EMAIL</h1> </label>
+<input type="email" name="email">
+
+
+    </table>
+</div>
+    <form method="post" action="/Google-Sign-in/profile.html">
+
+    <div class="g-signin2" type data-onsuccess="onSignIn"></div>
+</form>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+    <script>
+    function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+    </script>
+</body>
+
+</html>
